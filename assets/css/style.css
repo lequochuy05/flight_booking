@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    font-size: 62.5%;
+}
+:root {
+    --color_main: rgb(17, 150, 227);
+    --color_1: #02753d;
+    --color_2: #687176;
+    --color_3: #f4ac05;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: initial;
+    z-index: 100;
+}
+.header_logo {
+    font-size: 1.5rem;
+    color: var(--color_main);
+}
+.header_nav {
+    display: flex;
+    align-items: center;
+}
+.header_nav a {
+    color: var(--color_main);
+    font-size: 1rem;
+    margin: 0.8rem;
+}
+.header_userInfo {
+    margin-left: 0.8rem;
+    position: relative;
+}
+.header_userInfo-logo {
+    display: flex;
+    font-size: 0.8rem;
+    color: var(--color_main);
+    border: 1px solid #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+}
+.header_userInfo-logo:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.header_userInfo-logo i {
+    margin-right: 0.4rem;
+}
+
+.header_userInfo-info {
+    position: fixed;
+    margin-top: 1rem;
+    background-color: #fff;
+    width: 20%;
+    border-radius: 5%;
+}
+.header_userInfo-info {
+    display: none;
+    flex-direction: column;
+}
+.header_userInfo-info a {
+    display: flex;
+}
+.header_userInfo-info a label {
+    color: #000;
+    margin-left: 0.8rem;
+}
+.logout-button {
+    border: none;
+    background-color: initial;
+    display: flex;
+    margin: 0.8rem;
+    cursor: pointer;
+}
+.logout-button i {
+    margin-right: 0.8rem;
+}
+
+
+.home {
+    background-image: url('https://i.ytimg.com/vi/n2T-FX9ZuxU/maxresdefault.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+.home_title {
+    color: #fff;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    font-size: 2.5rem;
+    width: 100%;
+    height: 150px;
+}
+
+
+.book__content-flight {
+    background-color: rgba(91, 102, 125, 0.5);
+    position: relative;
+    top: 200px;
+    width: 90%;
+    margin-left: 5%;
+    padding: 1rem;
+}
+.flight__row1-setTicket {
+    display: flex;
+    justify-content: end;
+}
+
+.row1-setTicket-age-main {
+    display: flex;
+    padding: 8px 16px;
+    background-color: #ffffff40;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    margin-right: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.flight__row1-setTicket-countAdult {
+    margin: 0 8px;
+}
+.flight__row1-setTicket-countChild {
+    margin: 0 8px;
+}
+.flight__row1-setTicket-countInfant {
+    margin: 0 8px;
+}
+.flight__row1-setTicket-age i:last-child {
+    margin-left: 80px;
+}
+.row1-setTicket-chairType-title {
+    display: flex;
+    padding: 8px 16px;
+    background-color: #ffffff40;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    width: 220px;
+    cursor: pointer;
+}
+.row1-setTicket-chairType-title i {
+    margin-right: 8px;
+}
+@keyframes showList {
+    from {
+        transform: translateY(50px);
+        opacity: 0.1;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.row1-setTicket-age-list {
+    display: flex;
+    width: 340px;
+    position: absolute;
+    flex-direction: column;
+    background-color: #fff;
+    color: #333;
+    margin-top: 8px;
+    border-radius: 5px;
+    animation: showList 0.1s ease;
+    display: none;
+}
+.row1-setTicket-age-list-title {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 8px;
+    color: #687176;
+}
+.row1-setTicket-age-list-ageS {
+    width: 100%;
+}
+.setTicket-age-list-ageS-adult,
+.setTicket-age-list-ageS-child,
+.setTicket-age-list-ageS-infant {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 8px;
+    font-size: 16px;
+}
+.setTicket-age-list-ageS-adult p::after {
+    content: '(từ 12 tuổi)';
+    color: #ccc;
+    font-size: 12px;
+}
+.setTicket-age-list-ageS-child p::after {
+    content: '(từ 2 - 11 tuổi)';
+    color: #ccc;
+    font-size: 12px;
+}
+.setTicket-age-list-ageS-infant p::after {
+    content: '(dưới 2 tuổi)';
+    color: #ccc;
+    font-size: 12px;
+}
+.list-ageS-adult-labelAdult,
+.list-ageS-child-labelChild,
+.list-ageS-infant-labelInfant {
+    display: flex;
+}
+.list-ageS-adult-labelAdult i,
+.list-ageS-child-labelChild i,
+.list-ageS-infant-labelInfant i {
+    margin-right: 16px;
+}
+.list-ageS-adult-calcuAdult label:nth-child(odd),
+.list-ageS-child-calcuChild label:nth-child(odd),
+.list-ageS-infant-calcuInfant label:nth-child(odd) {
+    background-color: #f7f9fa;
+    padding: 8px 12px;
+    color: #356ff5;
+    font-size: 20px;
+}
+.list-ageS-adult-calcuAdult label:nth-child(2),
+.list-ageS-child-calcuChild label:nth-child(2),
+.list-ageS-infant-calcuInfant label:nth-child(2) {
+    padding: 8px 12px;
+    border-bottom: 2px solid #ccc;
+}
+.list-ageS-adult-calcuAdult label:first-child,
+.list-ageS-child-calcuChild label:first-child {
+    color: #687176;
+}
+.setTicket-age-list-ageS-done {
+    background-color: #0194f3;
+    color: #fff;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+#chairType {
+    outline: none;
+    background-color: #ffffff40;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.book__content-flight__row2 {
+    width: 100%;
+    display: flex;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+.content-flight__row2-address,
+.content-flight__row2-date {
+    display: flex;
+}
+.book__content-flight__row2 p {
+    color: #fff;
+}
+.flight__row2-address-from-inputFrom,
+.flight__row2-address-to-inputTo,
+.flight__row2-date-departureDate-inputDepar,
+#return_date {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+}
+#return_date {
+    background-color: var(--color_2);
+}
+.flight__row2-date-returnDate {
+    display: flex;
+    flex-direction: column;
+}
+.content-flight__row2-address select {
+    width: 200px;
+    height: 2rem;
+    border-start-end-radius: 10px;
+    border-end-end-radius: 10px;
+    border: none;
+    outline: none;
+}
+.flight__row2-address-from {
+    margin-right: 1rem;
+}
+.content-flight__row2-address i {
+    color: #0194f3;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+.flight__row2-address-to-inputTo,
+.flight__row2-address-from-inputFrom {
+    background-color: #fff;
+    padding-left: 0.8rem;
+    border-radius: 10px;
+}
+
+.content-flight__row2-date {
+    margin-left: 2rem;
+}
+.flight__row2-date-returnDate-icon label {
+    color: #fff;
+}
+.flight__row2-date-departureDate input,
+.flight__row2-date-returnDate input:last-child {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    padding-left: 1rem;
+}
+.flight__row2-date-departureDate {
+    margin-right: 1rem;
+
+}
+.content-flight__row2-search {
+    display: flex;
+    align-items: end;
+}
+.content-flight__row2-search button {
+    color: #fff;
+    background-color: rgb(255, 94, 31);
+    width: 2rem;
+    height: 2rem;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.content-flight__row2-search button:hover {
+    background-color: rgb(223, 68, 15);
+}
+
+.book__content-flight__row1 i {
+    color: #356ff5;
+}

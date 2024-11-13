@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+:root {
+    --color_main: rgb(0, 0, 0);
+    --color_1: #02753d;
+    --color_2: #687176;
+    --color_3: #f4ac05;
+}
+
+body {
+    background-color: #eaf1f4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: var(--color_main);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h3 {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 24px;
+}
+.header nav {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+.header nav i {
+    color: var(--color_2);
+    margin-right: 16px;
+}
+.header nav div {
+    margin-left: 50px;
+}
+.header nav div p {
+    color: #fff;
+}
+.header nav div a {
+    color: var(--color_3);
+}
+
+
+.controller {
+    background-color: #fff;
+    width: 200px;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    color: #3d3f40;
+    font-weight: 600;
+    line-height: 24px;
+    float: left;
+}
+.controller_ticket,
+.controller_customer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.controller_ticket:hover,
+.controller_customer:hover {
+    background-color: rgb(247 249 250);
+    cursor: pointer;
+}
+.controller_ticket-title,
+.controller_customer-title {
+    display: flex;
+    align-items: center;
+}
+.controller_ticket-title i,
+.controller_customer-title i {
+    margin-right: 16px;
+    width: 16px;
+}
+.controller_ticket nav,
+.controller_customer nav {
+    display: none;
+    flex-direction: column;
+}
+.controller_ticket nav p,
+.controller_customer nav p {
+    margin-left: 40px;
+    color: var(--color_2);
+    margin-top: 8px;
+}
+
+
+.main {
+    margin-left: 232px;
+    padding-left: 16px;
+}
+.main_header h3 {
+    font-size: 32px;
+    padding: 32px 16px;
+    border-bottom: 1px solid #ccc;
+    margin-right: 32px;
+}
+
+.main_content {
+    background-color: #fff;
+    margin-top: 24px;
+    margin-right: 18px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main_content h3 {
+    font-size: 24px;
+    padding: 24px 0;
+}
+.main_content-div {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.main_content-div label {
+    font-size: 16px;
+    line-height: 24px;
+}
+.main_content-div input,
+.main_content-div select {
+    width: 300px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+    border: 1px solid var(--color_2);
+    border-radius: 5px;
+}
+
+.content-airlineBamboo,
+.content-airlineVietJet,
+.content-airlineVietnam,
+.content-airlineVietravel,
+.content-airlineA321,
+.content-airlineA320,
+.content-airlineBoeing737,
+.content-airlineBoeing787,
+.content-airlineA350,
+.content-airlineA330 {
+    display: none;
+    flex-direction: column;
+}
+.main_content-ChairType {
+    display: flex;
+    margin-left: 40px;
+}
+.main_content-ChairType label {
+    margin-bottom: 16px;
+    margin-right: 16px;
+}
+.main_content-ticketType {
+    margin-left: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.main_content-div.ticket {
+    margin-left: 40px;
+    width: 350px;
+}
+.main_content-div.ticket div {
+    display: flex;
+    align-items: center;
+}
+.main_content-div.ticket div input {
+    margin-right: 8px;
+    width: 200px;
+}
+.main_content-ticketType-business,
+.main_content-ticketType-economy,
+.main_content-ticketType-prenium {
+    display: none;
+}
+
+.main_content-btn {
+    width: 100%;
+    height: 50px;
+    padding-top: 16px;
+    display: flex;
+    justify-content: end;
+}
+.main_content-btn button {
+    width: 150px;
+    border-radius: 5px;
+    background-color: var(--color_1);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.main_content-error {
+    display: none;
+    justify-content: end;
+    font-style: italic;
+    font-weight: 100;
+    color: red;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.flight_list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+.flight_list h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+.flight_list table {
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.flight_list table tr {
+    height: 30px;
+}
+.flight_list table tr th {
+    font-size: 14px;
+    text-align: start;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.flight_list table tr td {
+    text-align: start;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.flight_list table tr:nth-child(2n) {
+    background-color: #e0e0e0;
+}

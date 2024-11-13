@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+:root {
+    --color_main: rgb(0, 0, 0);
+    --color_1: #02753d;
+    --color_2: #687176;
+    --color_3: #f4ac05;
+}
+body {
+    background-color: rgb(242, 243, 243);
+}
+
+
+.header {
+    height: 50px;
+    display: flex;
+    box-shadow: 0px 2px 5px rgba(3,18,26,0.15);
+    align-items: center;
+    justify-content: space-between;
+}
+.header_logo {
+    font-size: 24px;
+    color: #028747;
+    margin-left: 10%;
+}
+.header_step {
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+}
+.header_step label {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color_2);
+    color: #fff;
+
+}
+.header_step p {
+    color: var(--color_2);
+}
+.header_step label:nth-of-type(3) {
+    background-color: var(--color_1);
+    color: #fff;
+}
+.header_step span {
+    width: 20px;
+    height: 1.5px;
+    background-color: #3c3c3c;
+    margin: 0 10px;
+}
+
+.container_main-cancel {
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color_1);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.container_main-cancel i {
+    margin-right: 10px;
+}
+
+.container_main {
+    height: fit-content;
+    width: 700px;
+    margin-left: calc((100% - 700px) / 2);
+    margin-top: 50px;
+}
+.container_main-header {
+    background-color: #028747;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.container_main-pays h2 {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container_main-pays input {
+    cursor: pointer;
+}
+.container_main-pays-qrcode,
+.container_main-pays-e-wallets,
+.container_main-pays-transfer {
+    margin: 20px 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.container_main-pays-qrcode label,
+.container_main-pays-e-wallets label,
+.container_main-pays-transfer label {
+    font-size: 20px;
+    font-weight: 600;
+}
+.container_main-pays-qrcode div:last-child,
+.container_main-pays-e-wallets div:last-child,
+.container_main-pays-transfer-content {
+    padding: 20px;
+}
+.container_main-pays-qrcode div ul,
+.container_main-pays-e-wallets div ul,
+.container_main-pays-transfer-content ul {
+    padding: 20px 40px;
+    background-color: #a0f1ca;
+    border: 2px solid var(--color_1);
+    border-radius: 10px;
+}
+.container_main-pays-e-wallets div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container_main-pays-transfer-content p {
+    padding-top: 20px;
+    font-weight: 600;
+    color: var(--color_2);
+}
+.pays_transfer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10px;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.pays_transfer-slected {
+    background-color: #a0f1ca;
+}
+.pays_transfer-content img {
+    height: 50px;
+}
+
+.pays_e-wallets-content,
+.container_main-pays-transfer-content {
+    display: none;
+}
+
+.container_main-btnPay {
+    margin-top: 80px;
+    padding: 20px;
+}
+.container_main-btnPay-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container_main-btnPay-price p {
+    font-size: 20px;
+    font-weight: 600;
+}
+.container_main-btnPay-price div {
+    display: flex;
+    align-items: center;
+}
+.container_main-btnPay-price div i {
+    margin-left: 10px;
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #028747;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.container_main-btnPay button {
+    background-color: var(--color_1);
+    color: #fff;
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.loading {
+    background-color: #fff;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+}
+
+circle {
+    fill: none;
+    stroke: hsl(147, 98%, 23%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+    100% {
+     transform: rotate(360deg);
+    }
+}
+
+@keyframes dash4 {
+    0% {
+     stroke-dasharray: 1, 200;
+     stroke-dashoffset: 0;
+    }
+   
+    50% {
+     stroke-dasharray: 90, 200;
+     stroke-dashoffset: -35px;
+    }
+   
+    100% {
+     stroke-dashoffset: -125px;
+    }
+}
+.loading p {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color_1);
+}
+
+
+
+.pay_detail {
+    width: 500px;
+    margin-left: calc(50% - 400px);
+    margin-top: 50px;
+    display: none;
+}
+.pay_detail-cancel {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color_1);
+    cursor: pointer;
+}
+.pay_detail-cancel i {
+    margin-right: 10px;
+}
+
+.pay_detail-content {
+    width: 800px;
+    margin-top: 30px;
+    display: flex;
+}
+.pay_detail-contentLeft-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a0f1ca;
+    color: var(--color_1);
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.pay_detail-contentLeft-header label {
+    color: #000;
+}
+.pay_detail-contentLeft-main {
+    padding: 20px;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.pay_detail-contentLeft-main h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pay_detail-contentLeft-main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pay_detail-contentLeft {
+    width: 500px;
+    border-radius: 20px;
+    margin-right: 30px;
+}
+.pay_detail-contentRight {
+    width: 270px;
+}
+.pay_detail-contentRight div:first-child {
+    background-color: #a0f1ca;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.pay_detail-contentRight div:first-child p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.pay_detail-contentRight div:last-child {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.pay_detail-button {
+    margin-top: 30px;
+}
+.pay_detail-button div label {
+    color: var(--color_2);
+    font-weight: 600;
+}
+.pay_detail-button button {
+    border: 0;
+    width: 100%;
+    background-color: var(--color_1);
+    color: #fff;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.pay_detail-button div label span {
+    color: red;
+}
+
+
+.select {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: openItem 0.5s forwards;
+}
+@keyframes openItem {
+    from {
+        transform: translate(-50%, -300%);
+    }
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+.select p {
+    padding: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.select div button {
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    background-color: var(--color_1);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+.select div button:first-child {
+    background-color: red;
+    margin-right: 20px;
+}

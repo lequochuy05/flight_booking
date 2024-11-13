@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  font-family: Godwit, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+header .contact-header {
+  width: 100%;
+  height: 8em;
+  background-color: #678ae8;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header .contact-header h1,
+header .contact-header h4 {
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+}
+.section {
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  margin-top: 80px;
+  width: 90%;
+}
+
+.section .map-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section .map-container iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+.section .contact-info {
+  margin-top: 30px;
+  text-align: left;
+  height: 25em;
+  overflow-y: auto;
+  border: 1px solid #ccc; /* Thêm viền xung quanh */
+  border-radius: 5px; /* Làm tròn góc */
+  padding: 20px;
+  background-color: #f0f0f0; /* Màu nền */
+}
+.section .contact-info::-webkit-scrollbar {
+  width: 10px;
+}
+
+.section .contact-info::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+.section .contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.section .contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section .contact-info li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section .map-container iframe {
+    height: 300px;
+  }
+
+  .section .contact-info {
+    text-align: center;
+  }
+}

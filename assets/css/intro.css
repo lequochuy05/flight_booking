@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.process {
+  width: 70%;
+  margin: 50px auto;
+  position: relative;
+}
+
+.connector {
+  position: absolute;
+  left: 35px;
+  top: 250px;
+  width: 2px;
+  height: calc(100% - 200px);
+  background-color: #b3b3b3;
+}
+.connector-dot {
+  position: relative;
+  left: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #007bff;
+  margin: 20px auto;
+}
+.process-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 50px;
+}
+
+.process-header h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+.process-header p {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #777;
+}
+
+.process-step {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  z-index: 1;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h3 {
+  color: #007bff;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.step-content p {
+  color: #666;
+  line-height: 1.6;
+}
+/*  */
+
+.stats {
+  text-align: center;
+  background-color: #007bff;
+  padding: 50px 0;
+  color: white;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.stats h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.stats p {
+  font-size: 1.2em;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.stats-box {
+  text-align: center;
+}
+
+.stats-box h3 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.stats-box p {
+  font-size: 1.2em;
+}
+
+.stats-icon img {
+  width: 90px;
+  height: 50px;
+}
+
+.bottom-note {
+  margin-top: 30px;
+  font-size: 1.1em;
+  color: white;
+}
