@@ -55,6 +55,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #4096e5;
 }
+
 @media screen and (max-width: 992px) {
   #dashboard-menu {
     height: auto;

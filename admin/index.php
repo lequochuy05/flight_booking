@@ -7,7 +7,7 @@ require('../model/admin.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ADMIN</title>
     <link rel="stylesheet" href="../assets/fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/admin.css">
 </head>
@@ -23,7 +23,11 @@ require('../model/admin.php');
             </div>
         </nav>
     </header>
+    
     <section class="controller">
+
+        
+
         <div class="controller_ticket">
             <div class="controller_ticket-title" onclick="openItem('controller_ticket nav')">
                 <i class="fa-solid fa-ticket"></i>
@@ -44,6 +48,18 @@ require('../model/admin.php');
                 <p>Danh sách</p>
             </nav>
         </div>
+
+        <!-- <div class="controller_statistical" onclick="openItem('controller_statistical nav')">
+            <div class="controller_statistical-title">
+                <p><i class="fa-solid fa-house"></i>
+                 Thống kê</p>
+            </div>
+            <nav>
+                <p>Doanh thu</p>
+                <p>Chuyến bay</p>
+            </nav>
+        </div> -->
+        
     </section>
     <section class="main">
         <div class="main_header">

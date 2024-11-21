@@ -20,7 +20,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.546625609968!2d105.8440834138998!3d21.024638895003624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac7696b68729%3A0x46343b2b3365a8a!2zQ29uZyB0eSBDUCBCw6EgS2kgUGjDoG5nIG5hbiBUw6EgSOG7jW5jIG5rD0gQ2jDoG5nIGzhu65n!5e0!3m2!1svi!2s!4v1694365239799!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
-        <div class="contact-info">
+        <div class="contact-info" style="margin-left: 30px;">
             <h2>Hệ thống văn phòng và chi nhánh HV trên toàn quốc</h2>
 
             <p><strong>Trụ sở chính:</strong></p>

@@ -3,7 +3,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light px-lg-3 py-lg2 shadow-sm sticky-top bg" id="nav-bar">
   <div class="container-fluid">
-    <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">DASHBOARD</a>
+    <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">TRAVELS</a>
     <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,12 +18,6 @@
         <li class="nav-item">
           <a class="nav-link me-2" href="contact.php">Liên Hệ</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link me-2" href="">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link me-2" href="">About</a>
-        </li> -->
       </ul>
       <div class="d-flex">
         
@@ -154,10 +148,10 @@
                 </button>
                 
                 <ul class="dropdown-menu dropdown-menu-lg-end">
-                  <li><a class="dropdown-item" href="edit_profile.php">Chỉnh sửa hồ sơ</a></li>
-                  <li><a class="dropdown-item" href="transaction_list.php">Danh sách giao dịch</a></li>                  
-                  <li><a class="dropdown-item" href="my_bookings.php">Đặt chỗ của tôi</a></li>                  
-                  <li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>
+                  <li><a class="dropdown-item" href="edit_profile.php"><i class="bi bi-person"></i> Chỉnh sửa hồ sơ</a></li>
+                  <li><a class="dropdown-item" href="transaction_list.php"><i class="bi bi-card-list"></i> Danh sách giao dịch</a></li>                  
+                  <li><a class="dropdown-item" href="my_bookings.php"><i class="bi bi-box-arrow-in-left"></i> Đặt chỗ của tôi</a></li>                  
+                  <li><a class="dropdown-item" href="logout.php"><i class="bi bi-box-arrow-in-right"></i> Đăng xuất</a></li>
                 </ul>
               </div>
 

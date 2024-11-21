@@ -27,62 +27,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight List</title>
+    
     <link rel="stylesheet" href="../assets/fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/flight_list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">   
+
 </head>
 <body>
-    <header class="header">
-        <a href="../index.php" class="header_logo">DINHVUONG</a>
-        <nav class="header_nav">
-            <a href="">Trang Chủ</a>
-            <a href="">Giới Thiệu</a>
-            <a href="">Liên Hệ</a>
-            <div class="header_userInfo" action="logout.php">
-                    <?php if (isset($_SESSION['userName'])): ?>
-                    <div class="header_userInfo-logo">
-                        <i class="fa-solid fa-user"></i>
-                        <p><?php echo htmlspecialchars($first_name . ' ' . $last_name); ?></p>
-                    </div>
-                    <?php elseif (isset($_SESSION['name'])): ?>
-                    <div class="header_userInfo-logo">
-                        <i class="fa-solid fa-user"></i>
-                        <p><?php echo htmlspecialchars($_SESSION['userName']);?></p>
-                    </div>
-            <?php else: ?>
-                <a href="register.php">Đăng Ký</a>
-                <a href="login.php">Đăng Nhập</a>
-            <?php endif; ?>
-                    <div class="header_userInfo-info">
-                        <a href="">
-                            <i class="fa-solid fa-user"></i>
-                            <label>Chỉnh sửa hồ sơ</label>
-                        </a>
-                        <a href="">
-                            <i class="fa-solid fa-table-list"></i>
-                            <label>Danh sách giao dịch</label>
-                        </a>
-                        <a href="">
-                            <i class="fa-solid fa-chair"></i>
-                            <label>Đặt chỗ của tôi</label>
-                        </a>
-                        <button type="submit" class="logout-button">
-                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                            <label>Đăng xuất</label>
-                        </button>
-                    </div>
+    <nav class="navbar navbar-expand-lg navbar-light px-lg-3 py-lg2 shadow-sm sticky-top bg" id="nav-bar">
+    <div class="container-fluid">
+        <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">DASHBOARD</a>
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link me-2" href="index.php">Trang Chủ</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link me-2" href="introduce.php">Giới Thiệu</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link me-2" href="contact.php">Liên Hệ</a>
+            </li>
+
+        </ul>
+        <div class="d-flex">
+            
+        <?php
+                
+            define('SITE_URL', 'http://localhost/flight_booking/');
+            define('USERS_IMG_PATH', SITE_URL.'image_customer/users/');
+            
+            if(isset($_SESSION['login']) && $_SESSION['login'] == true){
+                $path = USERS_IMG_PATH;
+                
+                echo<<<data
+                
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-dark shadow-none dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                    <img src="$path$_SESSION[uPic]" style="width: 25px; height: 25px;" class="me-1 rounded-circle">
+                    Xin Chào, $_SESSION[uName]
+                    </button>
+                    
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><a class="dropdown-item" href="edit_profile.php"><i class="bi bi-person"></i> Chỉnh sửa hồ sơ</a></li>
+                    <li><a class="dropdown-item" href="transaction_list.php"><i class="bi bi-card-list"></i> Danh sách giao dịch</a></li>                  
+                    <li><a class="dropdown-item" href="my_bookings.php"><i class="bi bi-box-arrow-in-left"></i> Đặt chỗ của tôi</a></li>                  
+                    <li><a class="dropdown-item" href="logout.php"><i class="bi bi-box-arrow-in-right"></i> Đăng xuất</a></li>
+                    </ul>
                 </div>
-                <script>
-                    document.addEventListener('click', function(event) {
-                        if (!document.querySelector('.header_userInfo-logo').contains(event.target)) {
-                            document.querySelector('.header_userInfo-info').style.display = 'none';
-                        }
-                    });
-                    document.querySelector('.header_userInfo-logo').addEventListener('click', function () {
-                        document.querySelector('.header_userInfo-info').style.display = 'block';
-                    });
-                </script>
-        </nav>
-    </header>
+
+                data;
+            }else{
+                echo<<<data
+                <button type="button" class="btn btn-outline-dark shadow-none me-lg-2 me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login
+                </button>
+                <button type="button" class="btn btn-outline-dark shadow-none" data-bs-toggle="modal" data-bs-target="#registerModal">
+                    Register
+                </button>
+                data;
+            }
+            ?>
+            
+            
+            
+        </div>
+        </div>
+    </div>
+    </nav>
+
+    <?php
+        
+        
+        require_once __DIR__ . '/../vendor/autoload.php';
+
+    ?>
 
     <div class="label_list">Danh Sách Chuyến Bay</div>
 
